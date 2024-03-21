@@ -32,7 +32,13 @@ blueprint:
       selector:
         device:
           integration: zha
-          manufacturer: [Philips, Signify Netherlands B.V.]
+          manufacturer: 'Philips'
+          entity:
+            domain: sensor
+            device_class: battery
+      device:
+          integration: zha
+          manufacturer: 'Signify Netherlands B.V.'
           entity:
             domain: sensor
             device_class: battery
