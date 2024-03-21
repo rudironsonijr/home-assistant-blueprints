@@ -29,19 +29,16 @@ blueprint:
     remote:
       name: Philips Hue Dimmer Switch
       description: Pick either RWL020 (US), RWL021 (EU) or RWL022 (from Signify Netherlands B.V.)
+      multiple: true
       selector:
         device:
-          integration: zha
-          manufacturer: 'Philips'
-          entity:
-            domain: sensor
-            device_class: battery
-      device:
-          integration: zha
-          manufacturer: 'Signify Netherlands B.V.'
-          entity:
-            domain: sensor
-            device_class: battery
+          filter:
+            - integration: zha
+              model: RWL020
+            - integration: zha
+              model: RWL021
+            - integration: zha
+              model: RWL022
     light:
       name: The light(s) to control
       description: >
