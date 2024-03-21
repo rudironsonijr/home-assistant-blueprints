@@ -29,7 +29,6 @@ blueprint:
     remote:
       name: Philips Hue Dimmer Switch
       description: Pick either RWL020 (US), RWL021 (EU) or RWL022 (from Signify Netherlands B.V.)
-      multiple: true
       selector:
         device:
           filter:
